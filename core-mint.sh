@@ -1,6 +1,6 @@
 #! /bin/bash
 # Setup the form layout
-yad --center --width 500 --height 400 \
+yad --center --width 500 --height 500 \
 --title="Install Core Peppermint Packages" \
 --text="Would you like to install the Peppermint Core Packages?" \
 --list --column $"The core packages are: " \
@@ -12,7 +12,13 @@ $"DConf Editor: For environment settings" \
 $"GpicView: GPicView is a  image viewer" \
 $"Parole: Media player for Xfce" \
 $"Atril: Multi-page document viewer" \
-$"Samaba: File sharing" \
+$"Samba: File sharing" \
+$"snapd: snap Packages platform" \
+$"flatpak: flatpak Pakages platform" \
+$"gnome disks: disk manager" \
+$"gnome software: gnome software store" \
+
+
 --button="Yes":1 \
 --button="No":2 \
 
