@@ -2,8 +2,9 @@
 # Setup the form layout
 yad --center --width 500 --height 500 \
 --title="Install Core Peppermint Packages" \
+--window-icon="/usr/share/pixmaps/peppermint-welcome.png" \
 --text="Would you like to install the Peppermint Core Packages?" \
---list --column $"The core packages are: " \
+--list --column $"The core packages are- " \
 $"Mate Calculator: Calculator" \
 $"Transmission: BitTorrent Client" \
 $"ARandR: Another XRandR GUI" \
@@ -13,12 +14,7 @@ $"GpicView: GPicView is a  image viewer" \
 $"Parole: Media player for Xfce" \
 $"Atril: Multi-page document viewer" \
 $"Samba: File sharing" \
-$"snapd: snap Packages platform" \
-$"flatpak: flatpak Pakages platform" \
 $"gnome disks: disk manager" \
-$"gnome software: gnome software store" \
-
-
 --button="Yes":1 \
 --button="No":2 \
 
@@ -30,7 +26,7 @@ cm=$?
 #if yes is clicked run this if statement
 if [ $cm -eq 1 ]; then 
 #Open the xfce terminal and execute the install command 
-xfce4-terminal --hold --execute  sudo apt install flatpak snapd mate-calc transmission arandr pmount dconf-editor gpicview parole atril gnome-disk-utility gnome-software firefox samba samba-client && exit 0 
+xfce4-terminal --hold --execute  sudo apt install mate-calc transmission arandr pmount dconf-editor gpicview parole atril gnome-disk-utility firefox samba samba-client gvfs-backends && exit 0 
 
 fi
 
