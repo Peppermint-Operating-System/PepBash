@@ -29,7 +29,7 @@ cm=$?
 #if yes is clicked run this if statement
 if [ $cm -eq 1 ]; then 
 #Open the xfce terminal and execute the install command 
-xfce4-terminal --hold --execute  sudo apt install flatpak snapd mate-calc transmission arandr pmount dconf-editor gpicview parole atril gnome-disk-utility gnome-software firefox samba samba-client gvfs-backends && exit 0 
+xfce4-terminal --hold --execute  sudo apt install flatpak snapd mate-calc transmission arandr pmount dconf-editor gpicview parole atril gnome-disk-utility gnome-software firefox samba samba-client gvfs-backends && sudo dpkg -i /usr/share/peppermint/software/ice_6.0.6_all.deb && sudo dpkg -i /usr/share/peppermint/software/mintstick_1.4.4_all.deb && exit 0  
 
 fi
 
