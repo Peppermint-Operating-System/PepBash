@@ -1,8 +1,11 @@
 #!/bin/bash
-
-yad --form --width=350 --height 250 \
+Message="\nTweaks Category"
+yad --form --width=350 --height 200 \
 --title "Peppermint Tweaks" \
---field="dconf Editor":fbtn dconf-editor \
---field="Update Settings":fbtn gpk-update-viewer \
---field="Mouse and Touchpad":fbtn xfce4-mouse-settings \
+--text-align=center \
+--text "$Message" \
+--window-icon="/usr/share/pixmaps/peppermint.png" \
+--field="dconf":fbtn dconf-editor \
+--field="Mouse":fbtn xfce4-mouse-settings \
+--columns=2 \
 --button=gtk-cancel:1
